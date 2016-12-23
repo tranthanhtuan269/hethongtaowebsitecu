@@ -1,0 +1,79 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+
+RewriteCond %{HTTP_HOST} ^www\.(.*)
+RewriteRule (.*) http://%1/ [NC,L]
+##################################################
+# khac phuc loi ckfinder ko hoat dong khi su dung rewite
+RewriteRule ^editor/ckfinder/ckfinder.html$ editor/ckfinder/ckfinder.html [NC,L]
+
+##################################################
+RewriteRule ^index.html$ index.php [NC,L]
+RewriteRule ^click/([0-9]*)/$ click.php?id=$1 [NC,L]
+RewriteRule ^thu-vien-anh.html$ index.php?f=picture [NC,L]
+RewriteRule ^lien-he.html$ index.php?f=contact [NC,L]
+RewriteRule ^dai-ly.html$ index.php?f=daily [NC,L]
+RewriteRule ^tin-tuc.html$ index.php?f=news [NC,L]
+
+#begin video
+RewriteRule ^video/(.*).html$ index.php?f=video&do=detail&t=$1 [NC,L]
+
+RewriteRule ^picture/(.*).html$ index.php?f=picture&do=categories&id=$1 [NC,L]
+RewriteRule ^picture/(.*)/(.*).html$ index.php?f=picture&do=categories&id=$1&page=$2 [NC,L]
+
+RewriteRule ^sitemap.html$ index.php?f=sitemap [NC,L]
+RewriteRule ^san-pham$ index.php?f=products [NC,L]
+RewriteRule ^san-pham-robo.html$ index.php?f=restaurant [NC,L]
+RewriteRule ^dac_san.html$ index.php?f=specialty [NC,L]
+RewriteRule ^download.html$ index.php?f=download [NC,L]
+
+RewriteRule ^admin/$ admin/index.php [NC,L]
+
+RewriteRule ^san-pham/tags/(.*)/catid/(.*)/(.*)/$ index.php?f=products&do=tags&tag=$1&catid=$2&page=$3 [NC,L]
+RewriteRule ^san-pham/tags/(.*)/catid/(.*)/$ index.php?f=products&do=tags&tag=$1&catid=$2 [NC,L]
+
+RewriteRule ^san-pham/tags/$ index.php?f=products&do=tags [NC,L]
+RewriteRule ^san-pham/add/(.*)$ index.php?f=products&do=cart_add&id=$1 [NC,L]
+RewriteRule ^san-pham/del/(.*)$ index.php?f=products&do=cart_delete&id=$1 [NC,L]
+RewriteRule ^san-pham/gio-hang/$ index.php?f=products&do=giohang [NC,L]
+RewriteRule ^phong-nghi/dat-phong-nhanh/$ index.php?f=products&do=datphong [NC,L]
+
+#begin user
+RewriteRule ^khach-hang/dang-nhap.html&type=(.*)&alias=(.*)$ index.php?f=user&do=login&id=$3&alias=$4 [NC,L]
+RewriteRule ^khach-hang/dang-nhap.html$ index.php?f=user&do=login [NC,L]
+RewriteRule ^khach-hang/dang-ky/$ index.php?f=user&do=register [NC,L]
+RewriteRule ^khach-hang/quen-mat-khau/$ index.php?f=user&do=recover [NC,L]
+RewriteRule ^khach-hang/thoat/$ index.php?f=user&do=logout [NC,L]
+RewriteRule ^khach-hang/thong-tin-ca-nhan/$ index.php?f=user&do=edit_profile [NC,L]
+
+#begin news
+RewriteRule ^print/(.*).html$ index.php?f=news&do=print&id=$1 [NC,L]
+RewriteRule ^(.*)/page/(.*)/$ index.php?f=news&do=categories&t=$1&page=$2 [NC,L]
+RewriteRule ^tag/(.*)/(.*)/$ index.php?f=news&do=tags&tag=$1&page=$2 [NC,L]
+RewriteRule ^(.*)/$ index.php?f=news&do=categories&t=$1 [NC,L]
+RewriteRule ^(.*)/(.*).html$ index.php?f=news&do=detail&c=$1&t=$2#comment [NC,L]
+RewriteRule ^(.*)/(.*).html$ index.php?f=news&do=detail&t=$1 [NC,L]
+RewriteRule ^tag/(.*)$ index.php?f=news&do=tags&tag=$1 [NC,L]
+
+
+#begin products
+RewriteRule ^but-(.*)/pages/(.*)/$ index.php?f=products&do=company&t=$1&page=$2 [NC,L]
+RewriteRule ^(.*)/page/(.*)$ index.php?f=products&do=categories&t=$1&page=$2 [NC,L]
+RewriteRule ^san-pham/(.*).htm$ index.php?f=products&page=$1 [NC,L]
+RewriteRule ^(.*)-([0-9]*).html$ index.php?f=products&do=detail&id=$2 [NC,L]
+
+RewriteRule ^(.*).html$ index.php?f=products&do=categories&t=$1 [NC,L]
+RewriteRule ^but-(.*).html$ index.php?f=products&do=company&t=$1 [NC,L]
+
+
+
+RewriteRule ^tag/(.*)/(.*)/$ index.php?f=products&do=tags&tag=$1&page=$2 [NC,L]
+RewriteRule ^tag/(.*)$ index.php?f=products&do=tags&tag=$1 [NC,L]
+RewriteRule ^tim-kiem/(.*)/(.*)$ index.php?f=products&do=search&p=$1&page=$2 [NC,L]
+RewriteRule ^tim-kiem/(.*)$ index.php?f=products&do=search&p=$1 [NC,L]
+
+RewriteRule ^p/khuyen-mai/$ index.php?f=products&do=psale [NC,L]
+
+

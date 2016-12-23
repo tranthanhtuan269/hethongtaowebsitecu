@@ -1,0 +1,494 @@
+
+
+body { margin:5px; color: #464646; font-family: Arial; font-size: 11px}
+
+tr, td, table, th {color: #464646; font-family: Arial; font-size: 11px}
+fieldset {border:1px solid #CCC;}
+form {margin: 0px}
+a, a:link, a:active, a:visited {color: #585858; text-decoration:none}
+a:hover      {color: #00619f; text-decoration: none}
+.tblpage
+{
+	background:#FFF url(../images/j_header_middle.png) repeat-x top;
+}
+.cursor{cursor:pointer;}
+.tdpage
+{
+	border:1px solid #e4e8f0;
+	padding:30px 0 100px;
+}
+img.imagese {
+  height: 60px;
+}
+.danhmuccat {
+    height: 200px;
+    overflow: auto;
+    border: 1px solid #cacaca;
+    padding: 10px;
+    list-style: none;
+    margin: 0;
+    background: #fff;
+}
+.danhmuccat li {
+    padding: 3px 0 2px 16px;
+    clear: both;
+    overflow: hidden;
+    background: url('../images/treeview-default-line.gif') 0 0 no-repeat;
+}
+.danhmuccat li input {
+    float: left;
+    margin-right: 10px;
+}
+.danhmuccat span.folder {
+    background: url('../images/folder.gif') 0 0 no-repeat;
+}
+.danhmuccat span.folder, .danhmuccat span.file {
+    padding: 0px 0 10px 22px;
+    line-height: 15px;
+    float: left;
+}
+.titlefooter
+{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	font-weight:normal;
+	color:#2A2A2A;
+	text-align:center;
+	padding-top:5px;
+}
+.login_input
+{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:normal;
+	color:#272727;
+	border:1px solid #e4e8f0;
+	height:22px;
+	width:150px;
+}
+img.showa {
+  width: 100px;
+  height: 80px;
+}
+.div-content
+{
+	border:1px solid #e4e8f0;
+	padding-bottom:10px;
+}
+.div-header
+{
+	background:#0d3a72 url(../images/j_header_middle.png) repeat-x top;
+	height:54px;
+}
+.div-banner
+{
+	background: url(../images/j_header_left.png) no-repeat top left;
+	height:54px;
+}
+.version {
+	display: block;
+	float: right;
+	text-align:right;
+	color: #fff;
+	padding: 15px 5px 0 0;
+}
+.login_button
+{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	background: url(../images/login/button.gif) no-repeat right;
+	border:0px;
+	color:#606162;
+	height:32px;
+	width:100px;
+	padding:4px 0 4px 8px;
+}
+
+textarea, select, input {
+	margin: 0px; color: #000000; font-family: Arial; font-size: 12px
+}
+
+/*input[type="button"], input[type="reset"], button{
+	cursor:pointer;
+	border:outset 1px #ccc;
+	background:#999;
+	color:#000;
+	font-family: Verdana;
+	font-size: 11px;
+	font-weight:bold;
+	padding: 1px 2px;
+	background:url(../images/bbg.gif) repeat-x left top;
+}*/
+h4
+{
+	font-size:16px
+}
+.title
+{
+	font-size:16px;
+	font-weight:bold;
+}
+hr {
+	height: 0px; border: solid #72AD75 0px; border-top-width: 1px;
+}
+
+.grey, a:link.grey, a:active.grey, a:visited.grey {font-size: 10px; color: #464646; font-family: tahoma; font-weight: normal; text-decoration: none}
+a:hover.grey {color: #FF9C12}
+
+.bred {
+	color : blue;
+	font-weight : bold;
+}
+
+.bblue {
+	color : green;
+	font-weight : bold;
+}
+
+.tableborder {
+	border: 1px solid #a0afc3;
+	background-color: #fcfcfc;
+}
+.msgborder         {background-color: #DFE4E9; }
+.row1 {
+	background-color:#fcfcfc;
+	border-bottom:1px solid #CCC;
+	border-right:1px solid #CCC ;
+	border-top:1px solid #FFF;
+	border-left:1px solid #FFF;
+}
+.row2 {
+	background-color:#fcfcfc;
+	border-bottom:1px solid #CCC;
+	border-right:0px solid #FFF;
+	border-top:1px solid #FFF;
+	border-left:1px solid #FFF;
+}
+.row3          {
+	background-color:#fcfcfc;
+	border-bottom:1px solid #CCC;
+	border-right:1px solid #CCC;
+	border-top:1px solid #FFF;
+	border-left:1px solid #FFF;
+}
+.row4 {
+	background-color:#F0F0F0;
+	border-bottom:1px solid #FFF;
+	border-right:1px solid #FFF ;
+	border-top:1px solid #FFF;
+	border-left:1px solid #FFF;
+	font-weight:bold;
+}
+
+.rowst {
+	background-color:#e5edf4;
+	border-bottom:1px solid #CCC;
+	border-right:1px solid #CCC;
+	border-top:1px solid #FFF;
+	border-left:1px solid #FFF;
+	font-weight:bold;
+}
+
+.row1sd {
+	color: #004968;
+	font-weight: bold;
+	background-color:#efefef;
+	border-bottom:1px solid #CCC;
+	border-right:1px solid #CCC ;
+	border-top:1px solid #FFF;
+	border-left:1px solid #FFF;
+}
+.row2sd {
+	color: #FF0000;
+	font-weight: bold;
+	background-color:#DDD;
+	border-bottom:1px solid #CCC;
+	border-right:0px solid #FFF;
+	border-top:1px solid #FFF;
+	border-left:1px solid #FFF;
+}
+.row3sd {
+	color: #004968;
+	font-weight: bold;
+	background-color:#efefef;
+	border-bottom:1px solid #CCC;
+	border-right:1px solid #CCC ;
+	border-top:1px solid #FFF;
+	border-left:1px solid #FFF;
+
+}
+
+.header
+{
+	margin: 3px;
+	padding: 4px;
+	/*background: #DDAA4B url('../images/header.gif')*/
+	background: #f0f0f0 url('../images/header.gif');
+	border-bottom: 1px solid #c7c7c7;
+	font-size: 14px;
+	color: #1e395b;
+	font-weight: bold;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	line-height: 20px;
+}
+
+.header1 {
+	margin: 3px;
+	padding: 4px;
+	background: #DDAA4B url('header.gif');
+	border: 0px solid #00572C;
+	border-right: 1px solid #F0F0F0;
+	font-size: 12px;
+	color: #FFF;
+	font-weight: bold;
+	font-family: Tahoma;
+	line-height: 20px;
+}
+
+
+.numnormal {
+	color: #FFF;
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.numover {
+	color: #FFFF00;
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.pagenumactive {
+	PADDING-RIGHT: 4px;
+	PADDING-LEFT: 4px;
+	PADDING-BOTTOM: 1px;
+	MARGIN: 0px;
+	COLOR: #000000;
+	PADDING-TOP: 1px;
+	BACKGROUND-COLOR: #F0F0F0;
+	TEXT-DECORATION: none;
+	border: 1px solid #A6AFBB;
+	font-size: 11px;
+	margin: 2px;
+	float: left;
+}
+.pagenum A:link {
+	PADDING-RIGHT: 4px;
+	PADDING-LEFT: 4px;
+	PADDING-BOTTOM: 1px;
+	MARGIN: 0px;
+	WIDTH: 1em;
+	COLOR: #9A9A9A;
+	PADDING-TOP: 1px;
+	BACKGROUND-COLOR: #FFFFFF;
+	TEXT-DECORATION: none;
+	border: 1px solid #A6AFBB;
+	font-size: 11px;
+}
+.pagenum A:visited {
+	PADDING-RIGHT: 4px;
+	PADDING-LEFT: 4px;
+	PADDING-BOTTOM: 1px;
+	MARGIN: 0px;
+	WIDTH: 1em;
+	COLOR: #9A9A9A;
+	PADDING-TOP: 1px;
+	BACKGROUND-COLOR: #FFFFFF;
+	TEXT-DECORATION: none;
+	border: 1px solid #A6AFBB;
+	font-size: 11px;
+}
+.pagenum A:active {
+	PADDING-RIGHT: 4px;
+	PADDING-LEFT: 4px;
+	PADDING-BOTTOM: 1px;
+	MARGIN: 0px;
+	WIDTH: 1em;
+	COLOR: #9A9A9A;
+	PADDING-TOP: 1px;
+	BACKGROUND-COLOR: #FFFFFF;
+	TEXT-DECORATION: none;
+	border: 1px solid #A6AFBB;
+	font-size: 11px;
+}
+.pagenum A:hover {
+	BORDER-RIGHT: #738294 1px solid; PADDING-RIGHT: 4px; BORDER-TOP: #738294 1px solid; PADDING-LEFT: 4px; PADDING-BOTTOM: 1px; MARGIN: 0px; BORDER-LEFT: #738294 1px solid; WIDTH: 1em; COLOR: #464646; PADDING-TOP: 1px; BORDER-BOTTOM: #738294 1px solid; BACKGROUND-COLOR: #DDD; TEXT-DECORATION: none
+	font-size: 11px;
+}
+
+.error_msg {
+	color: red;
+	font-size: 11px;
+	font-family: Tahoma;
+}
+
+#ajaxload_container {
+	position:absolute;
+	z-index:1001;
+	display: none;
+	width:100%;
+	height:100%;
+	left: 0px;
+	top: 0px
+}
+
+#ajaxload_content {
+	background-color:#ffffff;
+	border:0px;
+	padding: 10px;
+	width: 100%;
+	height: 100%;
+}
+
+.inset {
+	border-top: 1px solid threeddarkshadow;
+	border-left: 1px solid threeddarkshadow;
+	border-right: 1px solid threedhighlight;
+	border-bottom: 1px solid threedhighlight;
+}
+.outset {
+	border-bottom: 1px solid threeddarkshadow;
+	border-right: 1px solid threeddarkshadow;
+	border-left: 1px solid threedhighlight;
+	border-top: 1px solid threedhighlight;
+}
+
+/*  toyota My Dinh      */
+
+.row-car {
+	background-color:#fcfcfc;
+	border-bottom:1px solid #CCC;
+	border-right:0px solid #FFF;
+	border-top:1px solid #FFF;
+	border-left:1px solid #FFF;
+}
+.title-car{
+	float:left;
+	width:120px;
+	height:20px;
+	font-weight:bold;
+	padding:5px 0px;
+}
+.title-checkbox{
+	float:left;
+	width:;
+	height:20px;
+	font-weight:bold;
+	padding:5px;
+	width:66px;
+}
+.clear-car{
+	clear:both;
+}
+.span-car{
+	padding-left:;
+	height:25px;
+	float:left;
+}
+.row-car input{
+	float:left;
+}
+.row-car textarea{
+	float:left;
+	padding:5px;
+}
+.row-car .div-check{
+	float:left;
+	margin-top:5px;
+	margin-left:10px;
+}
+
+
+/* ######### CSS for Shade Tabs. Remove if not using ######### */
+#tabcontent {padding:0px; height:28px;background: url(../images/header.gif) repeat scroll 0 0 #F0F0F0;width:100%;float:;}
+#tabcontent .border-right{float:left; height:28px;width:1px;background:#BBB;}
+
+.shadetabs{
+padding: 0px;
+margin-left: 0;
+margin-top: 0px;
+margin-bottom: 0;
+font: bold 12px Verdana;
+list-style-type: none;
+text-align: left; /*set to left, center, or right to align the menu as desired*/
+background: none;
+width:100%;
+color:#FFF;
+}
+
+.shadetabs li{
+display: inline;
+margin: 0;
+}
+
+.shadetabs li a{
+float: left;
+display: block;
+text-decoration:none;
+text-align:center;
+font-weight:bold;
+font-size:11px;
+margin: 0;
+padding: 7px 13px 8px 13px; /*padding inside each tab*/
+color:#464646;
+background: transparent;
+text-transform:uppercase;
+
+}
+
+.shadetabs li a:visited{
+color: #FFFFFF;
+}
+
+.shadetabs li a:hover{
+color:#464646;
+background:lavender;
+}
+
+.shadetabs li a.selected{ /*selected main tab style top: 1px;*/
+position: relative;
+
+}
+
+.shadetabs li a.selected{ /*selected main tab style */
+background:lavender;
+color:#464646
+}
+
+.shadetabs li a.selected:hover{ /*selected main tab style */
+text-decoration: none;
+}
+.toyota{
+	background:#141414;
+	color:#FFF;
+}
+.pagenum {
+float: left;
+margin: 4px;
+}
+.show_img{
+	display: none;
+position: absolute;
+right: 77%;
+z-index: 22;
+transition: 1s all;
+}
+td.row1.hover-img:hover li img {
+display: block;
+cursor: pointer;
+transition: 1s all;
+box-shadow: 1px 2px 10px #030303;
+}
+td.row1.hover-img:hover img {
+	cursor: pointer;
+}
+td.row1.hover-img li {
+	list-style: none;
+}
+#thong_tin_sp,#thuoc_tinh,#seo{
+	width: 100%;
+float: left;
+}
