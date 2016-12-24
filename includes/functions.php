@@ -151,7 +151,7 @@ if(!$db->db_connect_id) {
 
 
 class Common {
-	function debug($msg) {
+	static function debug($msg) {
 		if (defined('DEBUG') && DEBUG) die($msg);
 		else die("Error");
 	}
@@ -164,7 +164,7 @@ class Common {
 		return strtolower($temp[sizeof($temp) - 1]);
 	}
 
-	function recursiveCopy($src, $dest) {
+	static function recursiveCopy($src, $dest) {
 		if (is_dir($src)) {
 			@mkdir($dest);
 			$handle = opendir($src);
@@ -180,7 +180,7 @@ class Common {
 		}
 	}
 
-	function recursiveArrayKeyExists($key, $arr) {
+	static function recursiveArrayKeyExists($key, $arr) {
 		if (array_key_exists($key, $arr) === false) {
 			foreach ($arr as $nextArr) {
 				if (is_array($nextArr)) {
@@ -192,14 +192,14 @@ class Common {
 		return false;
 	}
 
-	function findAllKeys($arr, &$kList) {
+	static function findAllKeys($arr, &$kList) {
 		foreach ($arr as $key => $val) {
 			$kList .= $key.':';
 			if (is_array($val)) Common::findAllKeys($val, $kList);
 		}
 	}
 
-	function buildTree($a, &$na) {
+	static function buildTree($a, &$na) {
 		static $listRoot = array();
 		static $listRootI = 0;
 		$preserveI = false;
@@ -250,7 +250,7 @@ class Common {
 		}
 	}
 
-	function constructURL($base, $suffix, $forceIndex = false) {
+	static function constructURL($base, $suffix, $forceIndex = false) {
 		$parsedURL = parse_url($base);
 		$parsedURL2 = $parsedURL['scheme'].'://';
 		if (!empty($parsedURL['user']) || !empty($parsedURL['pass'])) {
@@ -263,7 +263,7 @@ class Common {
 		return $parsedURL2;
 	}
 
-	function makeDOB($year, $month, $day) {
+	static function makeDOB($year, $month, $day) {
 		return strval(intval($year)).'-'.strval(intval($month)).'-'.strval(intval($day));
 	}
 }

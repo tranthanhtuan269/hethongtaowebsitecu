@@ -17,7 +17,8 @@ $page = intval(isset($_GET['page']) ? $_GET['page'] : (isset($_POST['page']) ? $
 $offset = ($page-1) * $perpage;
 $catArr = array();
 $cats = $db->sql_query_simple("SELECT catid, title FROM {$prefix}_news_cat");
-while (list($cid, $ctitle) = $db->sql_fetchrow_simple()) $catArr[$cid] = $ctitle;
+//var_dump($db->sql_fetchrow_simple());
+while (list($cid, $ctitle) = $db->sql_fetchrow_simple($cats)) $catArr[$cid] = $ctitle;
 $total = $db->sql_numrows($db->sql_query_simple("(SELECT id FROM {$prefix}_news WHERE alanguage='$currentlang') UNION (SELECT id FROM {$prefix}_news_temp WHERE alanguage='$currentlang')"));
 $result = $db->sql_query_simple("(SELECT id, catid, title, time, active, hits, nstart, 'normal' FROM {$prefix}_news WHERE alanguage='$currentlang') UNION (SELECT id, catid, title, UNIX_TIMESTAMP(timed) AS time, active, hits, nstart, 'timed' FROM {$prefix}_news_temp WHERE alanguage='$currentlang') $sortby LIMIT $offset, $perpage");
 if($db->sql_numrows($result) > 0) {
@@ -111,7 +112,7 @@ if($db->sql_numrows($result) > 0) {
         if ($newsType == 'normal') $titleLink = "<a href=\"?f=".$adm_modname."&do=edit_news&type=$newsType&sort=$sort&page=$page&id=$id\" info=\""._VIEW."\" target=\"\">$title</a> <a href=\"../".url_sid("index.php?f=".$adm_modname."&do=detail&id=$id")."\" info=\""._GETLINK."\" onclick=\"prompt('"._GETLINK."','".url_sid("index.php?f=$adm_modname&do=detail&id=$id")."'); return false;\"><img border=\"0\" src=\"images/link.png\"></a>";
         else $titleLink = $title;
         echo "<td class=\"$css\"><b>$titleLink</b></td>\n";
-        echo "<td class=\"$css hidden-xs hidden-sm\"><b><a href=\"".RPATH.url_sid("index.php?f=".$adm_modname."&do=categories&id=$id")."\" info=\""._VIEW."\" target=\"_blank\">{$catArr[$catid]}</a></b></td>\n";
+        echo "<td class=\"$css hidden-xs hidden-sm\"><b><a href=\"".RPATH.url_sid("index.php?f=".$adm_modname."&do=categories&id=$id")."\" info=\""._VIEW."\" target=\"_blank\">$catArr[$catid]</a></b></td>\n";
         echo "<td align=\"center\" class=\"$css  hidden-xs hidden-sm\">".ext_time($time, 2)."</td>\n";
         echo "<td align=\"center\" class=\"$css\">$active</td>\n";
         echo "<td align=\"center\" class=\"$css hidden-xs hidden-sm\">$hits</td>\n";
